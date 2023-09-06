@@ -1,3 +1,17 @@
+ grep -v '#' /etc/apt/sources.list | sort -u
+ 
+ echo "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list
+ 
+ echo "deb http://http.kali.org/kali kali-last-snapshot main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list
+ 
+ sudo apt update
+ 
+echo "deb http://http.kali.org/kali kali-experimental main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list.d/kali-experimental.list
+
+echo "deb http://http.kali.org/kali kali-bleeding-edge main contrib non-free non-free-firmware" | sudo tee /etc/apt/sources.list.d/kali-bleeding-edge.list
+
+
+
 sudo apt update
 sudo apt upgrade
 sudo apt --fix-broken install
